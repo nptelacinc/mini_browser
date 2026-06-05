@@ -1185,7 +1185,19 @@ pdfs.forEach(pdf => {
 
 html += `
 <p>
-<a href="${pdf
-  
-</body>
+<a href="${pdf.fileUrl}" target="_blank">
+📘 ${pdf.title}
+</a>
+</p>
+`;
+
+});
+
+document.getElementById("pdfList").innerHTML = html;
+
+}
+
+loadPDFs();
+
+</script>
 </html>
