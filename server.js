@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGODB_URI)
 
 // Static Files
 app.use(express.static(__dirname));
-
+app.use("/uploads", express.static("uploads"));
 // Home Page
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
