@@ -2,22 +2,24 @@ const express = require("express");
 const router = express.Router();
 
 router.post("/login", (req, res) => {
-  const { username, password } = req.body;
 
-  if (
-    username === "admin" &&
-    password === "VKWorld@2026"
-  ) {
-    return res.json({
-      success: true,
-      message: "Admin Login Success"
-    });
-  }
+    const { username, password } = req.body;
 
-  res.status(401).json({
-    success: false,
-    message: "Wrong Username or Password"
-  });
+    if (
+        username === process.env.ADMIN_USERNAME &&
+        password === process.env.ADMIN_PASSWORD
+    ) {
+        res.json({
+            success: true,
+            message: "Admin Login Successful"
+        });
+    } else {
+        res.status(401).json({
+            success: false,
+            message: "Invalid Username or Password"
+        });
+    }
+
 });
 
 module.exports = router;
