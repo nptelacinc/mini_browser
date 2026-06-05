@@ -50,5 +50,14 @@ router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
     });
 
 });
+router.delete("/delete-pdf/:id", async (req, res) => {
 
+    await PDF.findByIdAndDelete(req.params.id);
+
+    res.json({
+        success: true,
+        message: "PDF Deleted Successfully"
+    });
+
+});
 module.exports = router;
