@@ -437,7 +437,7 @@ Founder & Admin of VK World
 
 <li>⚡ Electrical Engineering Notes Coming Soon</li>
 
-<li>📄 PDF Library Coming Soon</li>
+<li>📄 PDF Library Available</li>
 
 <li>🎓 Study Materials Available Soon</li>
 
@@ -1166,6 +1166,26 @@ item.style.display='block';
 }
 
 </script>
+<div id="pdf-library">
+<h2>📄 PDF Library</h2>
 
+<div id="pdfList"></div>
+</div>
+
+<script>
+
+async function loadPDFs() {
+
+const res = await fetch("/api/pdfs");
+const pdfs = await res.json();
+
+let html = "";
+
+pdfs.forEach(pdf => {
+
+html += `
+<p>
+<a href="${pdf
+  
 </body>
 </html>
