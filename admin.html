@@ -37,7 +37,19 @@
     </style>
 </head>
 <body>
+<div id="loginBox">
+<h2>Admin Login</h2>
 
+<input type="text" id="username" placeholder="Username">
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+<br><br>
+
+<button onclick="login()">Login</button>
+</div>
+
+<div id="adminPanel" style="display:none;">
 <div class="box">
 
 <h2>📚 VK World Admin Panel</h2>
@@ -153,6 +165,41 @@ loadPDFs();
 loadPDFs();
 
 </script>
+</div>
 
+<script>
+
+async function login() {
+
+const username = document.getElementById("username").value;
+const password = document.getElementById("password").value;
+
+const res = await fetch("/admin/login", {
+method: "POST",
+headers: {
+"Content-Type":"application/json"
+},
+body: JSON.stringify({
+username,
+password
+})
+});
+
+const data = await res.json();
+
+if(data.success){
+
+document.getElementById("loginBox").style.display="none";
+document.getElementById("adminPanel").style.display="block";
+
+}else{
+
+alert("Wrong Login");
+
+}
+
+}
+
+</script>
 </body>
 </html>
