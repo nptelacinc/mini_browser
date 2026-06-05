@@ -30,7 +30,10 @@ app.get("/", (req, res) => {
 
 // Routes
 const userRoutes = require("./routes/userRoutes");
+const pdfRoutes = require("./routes/pdfRoutes");
+
 app.use("/api/users", userRoutes);
+app.use("/api/pdfs", pdfRoutes);
 
 // Server Start
 const PORT = process.env.PORT || 5000;
