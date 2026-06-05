@@ -45,7 +45,7 @@ router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
 
     const pdf = new PDF({
         title: req.body.title,
-        fileUrl: "/uploads/" + req.file.filename
+      fileUrl: req.file.path
     });
 
     await pdf.save();
