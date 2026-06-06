@@ -171,3 +171,10 @@ margin-bottom:20px;
 line-height:1.8;
 font-size:18px;
 }
+.search-box{
+padding:10px;
+border:1px solid #ccc;
+border-radius:20px;
+outline:none;
+width:180px;
+}
