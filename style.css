@@ -179,3 +179,12 @@ outline:none;
 width:180px;
   margin-left:20px;
 }
+.card a{
+text-decoration:none;
+color:#222;
+font-weight:bold;
+}
+
+.card a:hover{
+color:#0066ff;
+}
