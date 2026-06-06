@@ -45,6 +45,14 @@ router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
 console.log("UPLOAD HIT");
 console.log(JSON.stringify(req.body));
 console.log(JSON.stringify(req.file));
+    if (!req.file) {
+    console.log("FILE NOT FOUND");
+
+    return res.status(400).json({
+        success: false,
+        message: "File Not Found"
+    });
+}
     const pdf = new PDF({
         title: req.body.title,
       fileUrl: req.file.path
