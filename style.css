@@ -222,3 +222,40 @@ background:#0044cc;
     display: inline-block;
     margin: 10px 0;
 }
+/* Topic Name Black */
+.topic-title{
+    color: black !important;
+    font-size: 24px;
+    font-weight: bold;
+    background: none !important;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* View Topics Button Blue */
+.view-btn{
+    background: #007bff !important;
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.view-btn:hover{
+    background: #0056b3 !important;
+}
+
+/* Remove Blue Button from Topic Titles */
+.card h3{
+    background: none !important;
+}
+
+.card h3 a{
+    background: none !important;
+    color: black !important;
+    text-decoration: none !important;
+    padding: 0 !important;
+}
