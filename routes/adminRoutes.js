@@ -42,56 +42,15 @@ router.post("/login", (req, res) => {
 
 });
 
-router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
-    try {
-console.log("UPLOAD HIT");
-console.log("BODY DATA:");
-console.log(req.body);
-
-console.log("FILE DATA:");
-console.log(req.file);
-     
-    if (!req.file) {
-    console.log("FILE NOT FOUND");
-
-    return res.status(400).json({
-        success: false,
-        message: "File Not Found"
-    });
-}
-   console.log(req.file);
-        console.log("FILE PATH =", req.file.path);
-console.log("SECURE URL =", req.file.secure_url);
-console.log("FULL FILE =", JSON.stringify(req.file, null, 2));
-console.log("SAVING URL =", req.file.secure_url || req.file.path);
-const pdf = new PDF({
-    title: req.body.title,
-    fileUrl: req.file.secure_url || req.file.path
-});
-    await pdf.save();
-
+router.post("/upload-pdf", async (req, res) 
+=> {
     res.json({
         success: true,
-        message: "PDF Uploaded"
+        message: "Route Working"
     });
 
-} catch (err) {
+}); 
 
-    console.log("UPLOAD ERROR");
-        console.log("ERROR NAME =", err.name);
-console.log("ERROR MESSAGE =", err.message);
-   console.error(err);
-console.error(err.message);
-console.error(err.stack);
-
-    res.status(500).json({
-        success: false,
-        message: err.message
-    });
-
-}
-
-});
 router.delete("/delete-pdf/:id", async (req, res) => {
 
     await PDF.findByIdAndDelete(req.params.id);
