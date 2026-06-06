@@ -73,7 +73,9 @@ const pdf = new PDF({
 } catch (err) {
 
     console.log("UPLOAD ERROR");
-    console.log(err);
+   console.error(err);
+console.error(err.message);
+console.error(err.stack);
 
     res.status(500).json({
         success: false,
