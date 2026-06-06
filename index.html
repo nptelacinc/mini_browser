@@ -204,5 +204,28 @@ View Topics
 <p>© 2026 VK World. All Rights Reserved.</p>
      
 </footer>
+    <script>
+const searchBox = document.querySelector(".search-box");
+
+searchBox.addEventListener("keyup", function () {
+
+    let searchValue = searchBox.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        let text = card.innerText.toLowerCase();
+
+        if(text.includes(searchValue)){
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+});
+</script>
 </body>
 </html>
