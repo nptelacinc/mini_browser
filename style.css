@@ -140,3 +140,34 @@ margin-bottom:10px;
 .footer p{
 margin:8px 0;
 }
+.about-container{
+max-width:800px;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+
+.founder-img{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:5px solid #0066ff;
+box-shadow:0 0 20px rgba(0,102,255,0.4);
+margin-bottom:20px;
+}
+
+.about-container h1{
+color:#002b80;
+margin-bottom:10px;
+}
+
+.about-container h3{
+color:#555;
+margin-bottom:20px;
+}
+
+.about-container p{
+line-height:1.8;
+font-size:18px;
+}
