@@ -50,6 +50,8 @@ console.log(req.body);
 
 console.log("FILE DATA:");
 console.log(req.file);
+        console.log("FILE PATH =", req.file.path);
+console.log("SECURE URL =", req.file.secure_url);
     if (!req.file) {
     console.log("FILE NOT FOUND");
 
