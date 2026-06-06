@@ -96,7 +96,7 @@ document.getElementById("pdfForm")
 e.preventDefault();
 
 const formData = new FormData(e.target);
-
+alert("UPLOAD BUTTON CLICKED");
 const res = await fetch("/admin/upload-pdf", {
 method:"POST",
 body:formData
