@@ -44,8 +44,11 @@ router.post("/login", (req, res) => {
 router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
     try {
 console.log("UPLOAD HIT");
-console.log(JSON.stringify(req.body));
-console.log(JSON.stringify(req.file));
+console.log("BODY DATA:");
+console.log(req.body);
+
+console.log("FILE DATA:");
+console.log(req.file);
     if (!req.file) {
     console.log("FILE NOT FOUND");
 
