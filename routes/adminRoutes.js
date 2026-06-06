@@ -56,7 +56,8 @@ console.log(JSON.stringify(req.file));
 }
     const pdf = new PDF({
         title: req.body.title,
-      fileUrl: req.file.path
+     fileUrl: req.file.secure_url || req.file.path
+        console.log(req.file);
     });
 
     await pdf.save();
