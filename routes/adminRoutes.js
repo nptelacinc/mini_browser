@@ -61,10 +61,10 @@ console.log("SECURE URL =", req.file.secure_url);
     });
 }
    console.log(req.file);
-
+console.log("SAVING URL =", req.file.secure_url || req.file.path);
 const pdf = new PDF({
     title: req.body.title,
-    fileUrl: "test.pdf"
+    fileUrl: req.file.secure_url || req.file.path
 });
     await pdf.save();
 
