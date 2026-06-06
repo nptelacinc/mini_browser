@@ -18,9 +18,7 @@ const storage = new CloudinaryStorage({
     }
 });
 
-const upload = multer({
-  storage: multer.memoryStorage()
-});
+const upload = multer({ storage });
 router.post("/login", (req, res) => {
 
     const { username, password } = req.body;
