@@ -43,6 +43,8 @@ router.post("/login", (req, res) => {
 
 router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
 
+    console.log(req.file);
+console.log(req.body);
     const pdf = new PDF({
         title: req.body.title,
       fileUrl: req.file.path
