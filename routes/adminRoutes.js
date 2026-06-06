@@ -42,7 +42,9 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
-
+console.log("UPLOAD HIT");
+console.log(req.body);
+console.log(req.file);
     console.log(req.file);
 console.log(req.body);
     const pdf = new PDF({
