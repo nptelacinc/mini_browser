@@ -42,6 +42,7 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/upload-pdf", upload.single("pdf"), async (req, res) => {
+    try {
 console.log("UPLOAD HIT");
 console.log(JSON.stringify(req.body));
 console.log(JSON.stringify(req.file));
@@ -64,6 +65,18 @@ console.log(JSON.stringify(req.file));
         success: true,
         message: "PDF Uploaded"
     });
+
+} catch (err) {
+
+    console.log("UPLOAD ERROR");
+    console.log(err);
+
+    res.status(500).json({
+        success: false,
+        message: err.message
+    });
+
+}
 
 });
 router.delete("/delete-pdf/:id", async (req, res) => {
