@@ -62,7 +62,7 @@ console.log(req.file);
 
 const pdf = new PDF({
     title: req.body.title,
-    fileUrl: req.file.secure_url || req.file.path
+    fileUrl: "test.pdf"
 });
     await pdf.save();
 
