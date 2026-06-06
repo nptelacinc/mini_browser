@@ -10,6 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use("/admin", adminRoutes);
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URL)
