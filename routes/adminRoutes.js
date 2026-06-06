@@ -75,6 +75,7 @@ const pdf = new PDF({
 
     console.log("UPLOAD ERROR");
    console.error(err);
+console.error(JSON.stringify(err, null, 2));
 console.error(err.message);
 console.error(err.stack);
 
