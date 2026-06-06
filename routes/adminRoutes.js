@@ -14,10 +14,10 @@ console.log("API KEY =", process.env.CLOUDINARY_API_KEY);
 
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
-    params: {
+    params: async (req, file) => ({
         folder: "vk-pdfs",
         resource_type: "raw"
-    }
+    })
 });
 
 const upload = multer({ storage });
