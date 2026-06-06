@@ -54,12 +54,12 @@ console.log(JSON.stringify(req.file));
         message: "File Not Found"
     });
 }
-    const pdf = new PDF({
-        title: req.body.title,
-     fileUrl: req.file.secure_url || req.file.path
-        console.log(req.file);
-    });
+   console.log(req.file);
 
+const pdf = new PDF({
+    title: req.body.title,
+    fileUrl: req.file.secure_url || req.file.path
+});
     await pdf.save();
 
     res.json({
