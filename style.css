@@ -188,3 +188,16 @@ font-weight:bold;
 .card a:hover{
 color:#0066ff;
 }
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:8px 15px;
+background:#0066ff;
+color:white;
+text-decoration:none;
+border-radius:5px;
+}
+
+.card a:hover{
+background:#0044cc;
+}
