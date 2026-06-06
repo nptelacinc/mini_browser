@@ -201,3 +201,24 @@ border-radius:5px;
 .card a:hover{
 background:#0044cc;
 }
+.card h3 a{
+    color: black;
+    text-decoration: none;
+}
+
+.card h3 a:hover{
+    color: black;
+}
+
+.card a{
+    text-decoration: none;
+}
+
+.card > a{
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 0;
+}
