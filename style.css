@@ -85,8 +85,8 @@ cursor:pointer;
 }
 
 .hero-image img{
-width:350px;
-height:350px;
+width:280px;
+height:280px;
 border-radius:50%;
 box-shadow:0 0 30px rgba(255,255,255,0.3);
 }
