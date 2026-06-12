@@ -288,3 +288,21 @@ background:#0044cc;
     font-weight:600;
     margin-bottom:20px;
 }
+.logo-area h2{
+    margin:0;
+    font-size:32px;
+    font-weight:700;
+}
+
+.founder-name{
+    margin:0;
+    font-size:13px;
+    color:#666;
+    font-weight:600;
+}
+
+.logo-area p{
+    margin:0;
+    font-size:12px;
+    color:#888;
+}
