@@ -259,3 +259,26 @@ background:#0044cc;
     text-decoration: none !important;
     padding: 0 !important;
 }
+.hero-text h2{
+    color:#ffcc00;
+    font-size:42px;
+    font-weight:700;
+    margin-top:10px;
+    margin-bottom:5px;
+}
+
+.hero-text h3{
+    color:#ffffff;
+    font-size:24px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.hero-image img{
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid #ffffff;
+    box-shadow:0 0 30px rgba(255,255,255,0.4);
+}
