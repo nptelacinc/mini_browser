@@ -282,3 +282,9 @@ background:#0044cc;
     border:5px solid #ffffff;
     box-shadow:0 0 30px rgba(255,255,255,0.4);
 }
+.hero-text h4{
+    color:#ffffff;
+    font-size:22px;
+    font-weight:500;
+    margin-bottom:20px;
+}
