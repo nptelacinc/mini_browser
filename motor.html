@@ -1,30 +1,304 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Motor Connection - VK World</title>
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motor Connection - ElectroVault</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+line-height:1.7;
+}
+
+header{
+background:linear-gradient(135deg,#004aad,#007bff);
+color:white;
+padding:40px 20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:18px;
+}
+
+.container{
+max-width:1100px;
+margin:30px auto;
+padding:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+margin-bottom:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card h2{
+color:#004aad;
+margin-bottom:15px;
+}
+
+ul li,
+ol li{
+margin:10px 0;
+}
+
+.diagram{
+background:#eef6ff;
+padding:20px;
+border-radius:10px;
+text-align:center;
+margin-top:15px;
+}
+
+.diagram img{
+width:100%;
+max-width:700px;
+border-radius:10px;
+}
+
+.note{
+background:#fff3cd;
+border-left:5px solid orange;
+padding:15px;
+margin-top:15px;
+border-radius:5px;
+}
+
+.quiz{
+background:#e8f5ff;
+padding:20px;
+border-radius:10px;
+}
+
+.quiz h3{
+margin-bottom:15px;
+}
+
+.back-btn{
+display:inline-block;
+padding:12px 25px;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:8px;
+margin-top:20px;
+}
+
+.back-btn:hover{
+background:#0056b3;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+background:#222;
+color:white;
+}
+
+</style>
 </head>
 <body>
 
-<h1>Motor Connection</h1>
+<header>
+<h1>⚡ Single Phase Motor Connection</h1>
+<p>Learn Motor Wiring, Working, Safety & Practical Applications</p>
+</header>
 
-<h2>Single Phase Motor</h2>
+<div class="container">
+
+<div class="card">
+<h2>📘 Introduction</h2>
 
 <p>
-Single phase motor homes, shops aur small industries me use hota hai.
+Single Phase Motor ek AC motor hai jo ghar, shop,
+office aur small industries me use ki jati hai.
+Ye fan, water pump, cooler aur compressor me
+common hoti hai.
 </p>
 
-<h2>Motor Connection Steps</h2>
+</div>
+
+<div class="card">
+<h2>🔧 Main Parts of Motor</h2>
+
+<ul>
+<li>Stator</li>
+<li>Rotor</li>
+<li>Starting Capacitor</li>
+<li>Running Capacitor</li>
+<li>Terminal Box</li>
+<li>Cooling Fan</li>
+<li>Motor Body</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>🖼 Motor Connection Diagram</h2>
+
+<div class="diagram">
+
+<h3>Basic Wiring Diagram</h3>
+
+<pre>
+
+ Phase (L)
+    |
+   MCB
+    |
+    |
+  MOTOR
+    |
+ Neutral (N)
+
+ Earthing
+    |
+ Motor Body
+
+</pre>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>⚙ Connection Procedure</h2>
 
 <ol>
-<li>Main Supply OFF karo</li>
-<li>Phase wire connect karo</li>
-<li>Neutral connect karo</li>
-<li>Earthing connect karo</li>
-<li>MCB ON karke test karo</li>
+
+<li>Main Supply OFF karo.</li>
+
+<li>MCB OFF position me rakho.</li>
+
+<li>Phase wire motor terminal me connect karo.</li>
+
+<li>Neutral wire connect karo.</li>
+
+<li>Earthing motor body se connect karo.</li>
+
+<li>Sabhi screw terminals tight karo.</li>
+
+<li>Insulation check karo.</li>
+
+<li>MCB ON karo.</li>
+
+<li>Motor run karke test karo.</li>
+
 </ol>
 
-<a href="index.html">⬅ Back To Home</a>
+</div>
+
+<div class="card">
+
+<h2>⚠ Safety Precautions</h2>
+
+<div class="note">
+
+<ul>
+
+<li>Supply OFF karke hi wiring karo.</li>
+
+<li>Earthing zarur connect karo.</li>
+
+<li>Loose wire use mat karo.</li>
+
+<li>Wet hands se wiring mat karo.</li>
+
+<li>Proper MCB use karo.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🏭 Applications</h2>
+
+<ul>
+
+<li>Water Pump</li>
+
+<li>Ceiling Fan</li>
+
+<li>Air Cooler</li>
+
+<li>Small Compressor</li>
+
+<li>Domestic Machines</li>
+
+<li>Workshop Equipment</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❓ MCQ Quiz</h2>
+
+<div class="quiz">
+
+<h3>Q1. Single Phase Motor kis supply par chalta hai?</h3>
+<p>✅ AC Supply</p>
+
+<hr>
+
+<h3>Q2. Motor body ko kis se connect karte hain?</h3>
+<p>✅ Earthing</p>
+
+<hr>
+
+<h3>Q3. Motor protection ke liye kya use hota hai?</h3>
+<p>✅ MCB</p>
+
+<hr>
+
+<h3>Q4. Water Pump me kis type ka motor use hota hai?</h3>
+<p>✅ Single Phase Motor</p>
+
+<hr>
+
+<h3>Q5. Connection se pehle kya karna chahiye?</h3>
+<p>✅ Main Supply OFF</p>
+
+</div>
+
+</div>
+
+<a href="electrical.html" class="back-btn">
+⬅ Back To Electrical Section
+</a>
+
+</div>
+
+<div class="footer">
+© 2026 ElectroVault | VK World | Vijay Kumar Mandal
+</div>
 
 </body>
 </html>
+```
